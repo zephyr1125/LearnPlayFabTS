@@ -44,7 +44,8 @@ export class LearnPlayFab extends Scene{
         //add button to send score
         this.add.text(10, 30, "Click to send score", { color: '#0f0' })
             .setInteractive().on('pointerdown', () => {
-                this.SendLeaderBoard(100);
+                //send random score
+                this.SendLeaderBoard(Math.floor(Math.random() * 100));
             });
         //add button to get leaderboard
         this.add.text(10, 50, "Click to get leaderboard", { color: '#0f0' })
